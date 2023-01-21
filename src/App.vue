@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <ToastComponent></ToastComponent>
   <NewToDoItem @todo-added="addToDo"></NewToDoItem>
     <h1>To-Do List</h1>
     <h2 id="list-summary">{{ listSummary}}</h2>
@@ -17,6 +18,7 @@
 import uniqueId from "lodash.uniqueid";
 import ToDo from './components/ToDo.vue'
 import NewToDoItem from './components/newToDoItem.vue'
+import ToastComponent from './components/bootstrap/Toastik.vue'
 
 export default {
   name: 'App',
@@ -24,6 +26,7 @@ export default {
     // HelloWorld,
     ToDo,
     NewToDoItem,
+    ToastComponent
   },
   data() {
     return {
